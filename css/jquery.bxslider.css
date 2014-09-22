@@ -224,6 +224,32 @@ body { /*IN CONFLICT WITH MAIN BODY STYLE*/
 
 /* media queries to adjust caption size, position at iphone portrait and landscape sizes */
 
+/* Tablet Landscape Size */
+@media (max-width: 1050px) {
+	
+	.bx-caption span {
+		font-size: .75em !important;
+}
+
+	.img-slider {
+		width:100%;
+	}
+}
+
+
+/* Tablet Portrait Size */
+@media  (max-width: 970px) {
+
+.bx-caption span {
+		font-size: .75em !important;
+}
+
+.img-slider {
+	width:100%;
+	}
+
+}
+
 @media (max-width : 568px) { 
 
 

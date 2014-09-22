@@ -10,6 +10,7 @@ $(document).load(function() {
 		var docbottom = docheight - 50;
 		var sectionTop = wintop + 30;
 		
+		
 	
 		// ensure placemarker always on correct chapter on page refresh
 		var divFirst = $('#section-1').position().top;
