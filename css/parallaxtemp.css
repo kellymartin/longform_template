@@ -70,8 +70,7 @@ html[xmlns] .clearfix {
 	float:right;
 	width:40%;
 	max-width:500px;
-	margin-bottom:25%;
-	margin-top: 25%;
+	margin-top: 5%;
 	margin-left:2em;
 	margin-right:-45%;
 	width:30%;
@@ -119,7 +118,7 @@ html[xmlns] .clearfix {
 	font-size:46px !important;
 	font-family:'aleoregular', courier;
 	line-height:50px !important;
-	text-transform:uppercase;
+	text-transform:none;
 	margin-bottom:0 !important;
 	padding: .5em 0;
 }
@@ -396,6 +395,8 @@ p#author {
 
 p#author span {
 	font-size:75%;
+	letter-spacing:.05em;
+	text-transform:uppercase;
 	}
 
 a#view-list {
