@@ -76,10 +76,13 @@ $(document).load(function() {
 $(document).ready(function() {
 	// PARALLAXPARALLAXPARALLAX HAPPENS HERE.
 	// Init Skrollr
-	var s = skrollr.init();
+	
+	if( $(window).width() > 970) {
+		var s = skrollr.init();
  
-	// Refresh Skrollr after resizing our sections
-	s.refresh($('.car-elevator'));
+		// Refresh Skrollr after resizing our sections
+		s.refresh($('.car-elevator'));
+	}
 
 	
 // universal variables
