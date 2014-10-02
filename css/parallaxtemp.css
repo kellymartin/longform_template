@@ -125,8 +125,8 @@ html[xmlns] .clearfix {
 	margin-top: 0 !important;
 	margin-left:5em;
 	margin-right:-50%;
-	display:block;
-	border-bottom: 1px solid #7a7a7a;
+/*	display:block;
+*/	border-bottom: 1px solid #7a7a7a;
 	border-top: 1px solid #7a7a7a;
 	padding: 1em 0;
 }	
@@ -158,6 +158,8 @@ html[xmlns] .clearfix {
 	
 .authorsidebar-right li {
 		margin: 1em auto;
+		display:inline;
+		float:left;
 	}
 	
 .authorsidebar-right li a:link {
@@ -321,10 +323,10 @@ ul.dropdown li.icon-logo a
 	background-position:top center;
 	background-repeat:no-repeat;
 	margin-right:15px;
-	margin-top:.15em;
+	margin-top:.23em;
 	padding-left:0;
 	padding-right:0;
-	background:url('../images/irwlogo2.png') top center no-repeat;
+	background:url('../images/irwlogo2.png') top left no-repeat; /* km changed from 'top center no-repeat' to fix logo spacing at mobile */
 }
 
 ul.dropdown li.icon-logo a:hover {
@@ -388,17 +390,6 @@ header ul li a:hover {
 }
 
 
-.sectionintro {
-	width:100%;
-	background-color:#88BEBE;
-	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	padding:10px;
-	overflow:hidden;
-	padding-top:15%;
-}
-
 h1 {
 	font-family:'aleoregular';
 	font-size:3.75em;
@@ -449,31 +440,6 @@ h1 {
 	color: #fff;
 	}		
 
-/*img#pearl {
-	float:right;
-	padding-left:30px;
-	width:45%;
-}*/
-/*.intro h1 {
-	color:#fff;
-	font-size:90px;
-	line-height:80px;
-	padding-top:80px;
-	font-family:Georgia, serif;
-	text-transform:uppercase;
-	text-align:right;
-}*/
-/*.intro h1 big {
-	display:block;
-	font-size:120px;
-	line-height:110px;
-	margin:6px 0;
-}
-.intro h1 span {
-	font-size:68px;
-	line-height:55px;
-	display:block;
-}*/
 p#author {
 	color:#fff;
 	font-family:'aleoregular',courier, serif;
@@ -589,27 +555,9 @@ a#view-list {
 */	position: relative; padding-bottom: 60.25%; height: 0; overflow: hidden; max-width: 100%; height: 100%;
 }
 
-.video iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-/*#chapter-1 {
-	background-image: url(images/NSApg2.jpg);
-	width:100%;
-	position: relative;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
+.video iframe {
+	position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
 	}
-	*/
-/*	#chapter-3 {
-	background-image: url(images/NSApg2.jpg);
-	width:100%;
-	position: relative;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	}*/
-
-
 
 
 /* Responsive Queries
@@ -702,6 +650,24 @@ a#view-list {
 	background:#fff;
 	}
 	
+.authorsidebar-right {
+	float:none;
+	width:100%;
+	max-width:970px;
+	margin: 0 0 5em 0 !important;
+	padding: 1em 0;
+	border-bottom:0px !important;
+}
+
+.authorsidebar-right ul {
+	border-bottom:1px solid #000000;
+	padding-bottom:6em;
+}
+
+.authorsidebar-right li {
+	margin-right:2em;
+	}
+	
 .sidebar-right {
 	float:none;
 	width:100%;
@@ -743,7 +709,7 @@ a#view-list {
 @media (max-width: 800px) {
 	
 .big-background {
-	background-position: center center;
+	background-position: center bottom; /* bottom is what makes image align to bottom instead of center */
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-size: contain;
@@ -757,15 +723,19 @@ a#view-list {
 	
 .intro {
 	padding-top:20%;
-	max-height: 600px;
 }
 
 .intro h1 {
-	font-size:28px !important;
+	font-size:24px !important;
 	padding-top:.2em;
 	padding-bottom:.2em;
 	line-height:1em;
 	}
+	
+.intro-dek {
+	width:90%;
+	}
+
 
 .intro-dek h5 {
 	font-size: 15px;
@@ -775,6 +745,7 @@ a#view-list {
 .car-elevator .intro {
 	background-color:#fff;
 	}
+	
 a#view-list {
 	text-align:center;
 	clear:both;
@@ -803,23 +774,24 @@ a#view-list {
 	width:100%;
 	margin: .5em 0 4em 0 !important;
 	padding: 1em 0;
+	border-bottom:0px !important;
 }
 
-
 .authorsidebar-right ul {
-display:none;
+	border-bottom:1px solid #000000;
+	padding-bottom:6em;
 }
 
 .section-box {
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+	border-top: 1px solid #000 !important;
+	border-bottom: 1px solid #000 !important;
 	max-width:70%;
-	padding:.5em .5em .5em 1em;
-	margin:20% auto;
-		}
+	padding:0 !important;
+	margin:0 auto !important;		}
 		
 .section-box h6 {
-	font-size:18px;
+	font-size:32px;
+	color:#000000;
 	}
 
 p#author span {
@@ -847,7 +819,7 @@ p#author span {
 @media (max-width: 550px) {
 
 .nav-item ul {
-padding-left:.5em;}
+padding-left:.25em;}
 
 .captionbox {
 	max-width:60% !important;
@@ -855,20 +827,20 @@ padding-left:.5em;}
 	
 .intro {
 	padding-top:20%;
-	max-height: 700px;
+	max-height: 550px;
 	margin-bottom:0 !important;
 }
 
 .intro h1 {
-	font-size:2.75em;
-	padding-top:.2em;
+	font-size:24px;
+	padding-top:.3em;
 	padding-bottom:.2em;
 	line-height:1em;
 	}
 
 .intro-dek h5 {
-	font-size: 15px;
-	line-height:18px;
+	font-size: 14px;
+	line-height:16px;
 	}
 
 a#view-list {
@@ -900,12 +872,11 @@ a#view-list {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	max-width:70%;
-	padding:.5em .5em .5em 1em;
-	margin:70% auto 10% auto;
+/*	padding:.5em .5em .5em 1em;
+*/	margin:0 auto !important;
 		}
 		
 .section-box h6 {
-	font-size:18px;
 	}
 
 .pullquote {
