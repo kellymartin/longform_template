@@ -58,7 +58,6 @@ html[xmlns] .clearfix {
 .socialmenu li {
 	display:inline;
 	padding: 0 .25em .1em .15em;
-		
 	}
 
 .big-background {
@@ -76,6 +75,55 @@ html[xmlns] .clearfix {
 	margin:5em 50% 0 10%;
 	background:#fff;
 	}
+	
+/*.mapbox {
+	display:block;
+	max-height:550px; 
+	max-width:950px;
+	position:relative;
+	}*/
+	
+	/** annieb edits **/	
+.mapbox {
+	display:block;
+	height:550px; 
+	width:120%;
+	position:relative;
+	margin-top:0 !important;
+	margin-bottom:3em !important;
+}
+
+
+.maptext {
+		margin-top:4em !important;
+		margin-bottom:.0!important;
+		width:120%;
+}
+
+.maptext h8 {
+	font-family:arial, helvetica, sans-serif;
+	font-size: 2em;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#54A8A8;
+}
+
+.maptext p {
+	color:#5E5B5B;
+	font-size:17px !important;
+	font-family:Arial, Helvetica, sans-serif !important;
+	line-height:18px !important;
+	margin-bottom:.25em !important;	
+	}
+
+#locator-map {
+	display:block;
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:100%;
+	margin: 3em 0;
+}
 
 .sidebar-right {
 	float:right;
@@ -311,6 +359,7 @@ header {
 	position:fixed;
 	top:0;
 	z-index:99999;
+	
 }
 header ul {
 	margin:0 auto;
@@ -322,8 +371,9 @@ ul.dropdown li.icon-logo a
 	display:block;
 	background-position:top center;
 	background-repeat:no-repeat;
-	margin-right:15px;
+	margin-right:.2em;
 	margin-top:.23em;
+	margin-bottom:.2em;
 	padding-left:0;
 	padding-right:0;
 	background:url('../images/irwlogo2.png') top left no-repeat; /* km changed from 'top center no-repeat' to fix logo spacing at mobile */
@@ -348,7 +398,7 @@ header ul li {
 }
 header ul li#mag-menu > a {
 	position:relative;
-	top:2px;
+	top:.25em;
 }
 header ul li#comment-icon > a {
 	position:relative;
@@ -364,7 +414,7 @@ header ul li.currentCh a {
 #nav-sections-list {
 	display:inline-block;
 	position:relative;
-	top:6px;
+	top:.55em;
 }
 header ul li a {
 	color:#888;
@@ -616,6 +666,19 @@ a#view-list {
 	border-bottom: 1px solid #000;
 }
 
+}
+
+/* background image hack */
+@media (min-width: 1031px) {
+	.big-background {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover; /* this only appears inside this mid-width:1031px query */
+		height: 100%;
+		width: 100%;
+	}
+	
 }
 
 /* Tablet Portrait Size - Adjusted for Opening Portrait */
@@ -918,4 +981,12 @@ p#author span {
 	}
 	
 }
+
+
+	
+
+	
+
+
+
 

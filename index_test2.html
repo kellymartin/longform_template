@@ -15,6 +15,8 @@ FAVICON HERE-->
 <!-- bxSlider CSS file -->
 <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" /> 
 
+<!-- mapbox and mapfile additional css -->
+<link rel='stylesheet' type='text/css' href="css/style.css" />
 
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,6 +27,15 @@ FAVICON HERE-->
 </script>
 <!-- bxSlider Javascript file -->
 <script src="js/jquery.bxslider.min.js"></script>
+
+<!-- mapbox scripts -->
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> THIS SCRIPT KILLS THE PARALLAX NAV AND SLIDESHOW FUNCTIONALITY-->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+<link rel='stylesheet' type='text/css' href="css/parallaxtemp.css">
+
 
 <!-- document on ready event-->
 	<script type="text/javascript">
@@ -70,9 +81,9 @@ $(function() {
 <div id="courtesy-inner">
 
 	<ul class="socialmenu">
-		<li><a href="http://www.facebook.com" title="IRW on Facebook" target="_blank"><img src="images/facebooknav.png"></a></li>
-		<li><a href="http://www.twitter.com" title="IRW on Twitter" target="_blank"><img src="images/twitternav.png"></a></li>
-		<li><a href="http://www.instagram.com" title="IRW on Instagram" target="_blank"><img src="images/instagramnav.png"></a></li>
+		<li><a href="http://www.facebook.com" title="IRW on Facebook" target="_blank"><img src="images/smfacebook.png"></a></li>
+		<li><a href="http://www.twitter.com" title="IRW on Twitter" target="_blank"><img src="images/smtwitter.png"></a></li>
+		<li><a href="http://www.instagram.com" title="IRW on Instagram" target="_blank"><img src="images/sminstagram.png"></a></li>
 	</ul> 
 
 <ul class="dropdown clearfix">
@@ -263,6 +274,34 @@ One of Little’s girlfriends is making out with a boy in a truck, hoping to mak
 	<p>And since immigration reform efforts began with former President George W. Bush in 2000, border security has become the premise to any possible path to legalization for the estimated 11 million undocumented living in the country. The 2013 Senate-passed $46 billion “Border Surge” bill included another doubling of Border Patrol along with specific increases in Big Bend: 29 mobile surveillance system; 1105 seismic, imaging and infrared ground sensors; and 131 thermal imaging systems and night vision goggles.</p> 
 	<p>Dodson suspects more is coming and he wants to let those in Washington know the status quo of more guns and people is not the solution and in the meantime, it’s disrupting a way of life. </p> 
 	<p>“The whole system is falling apart and it’s just wasting taxpayer money,” he says. </p> 
+    
+        	<div class="maptext"> <!--for headline and explainer text-->
+    	<h8>Map Headline Here</h8>
+        <p> Bacon ipsum dolor amet adipisicing kevin short ribs incididunt in jerky filet mignon picanha flank. Ground round pig meatball dolore strip steak short loin cow landjaeger. Nisi venison ham elit. Dolor sint frankfurter enim id lorem, venison strip steak cupidatat qui sunt. Non pariatur cupidatat, ullamco elit consequat drumstick in aliqua ipsum.</p>
+    	</div> <!--close maptext-->
+    
+    <div class="mapbox"> <!--box to hold absolute positioned div-->
+        <div id="locator-map">
+        
+        	<script>
+var map = L.mapbox.map('locator-map', 'irworkshop.in989gmk')
+    .setView([30.976247, -100.117619], 6); 
+	
+		//combined county shapefile
+	var newCounty = L.mapbox.tileLayer('irworkshop.ah1cq5mi').addTo(map);
+	var gridLayer = L.mapbox.gridLayer('irworkshop.ah1cq5mi').addTo(map);
+	var gridControl = L.mapbox.gridControl(gridLayer, {follow: true}).addTo(map);
+	
+	//county 2: Texas Outline
+	var newCounty2 = L.mapbox.tileLayer('irworkshop.sq8e61or').addTo(map);
+	var gridLayer2 = L.mapbox.gridLayer('irworkshop.sq8e61or').addTo(map);
+	var gridControl = L.mapbox.gridControl(gridLayer2, {follow: false}).addTo(map);
+	</script>
+        
+        </div> <!--locator-map close -->
+        
+        </div> <!-- closes mapbox div-->
+    
 	<p>Dodson’s frustration with the federal incursion is rooted in something deeper than fiscal responsibility. As we drive around, the sun bears down across a rolling sea of volcanic rubble, cacti and brush. The desert teams with life while looking impossibly dry. </p> 
 	<p>This terrain only attracts a certain frontiersman-type personality, people for whom the barrenness is less lonely than free and pure. Like that of most locals, Dodson’s is a mixed lineage. His relatives were bootleggers and lawmen, Mexicans and Americans. The border was in decades past seen less as a barrier than a place of commerce, he says. He shakes his head at the perception of this as a dangerous place — a view fostered both in Hollywood and in Washington. </p> 
 <p>“Let me tell you how you’re going to get hurt here,” he says. “You’re going to walk off the desert without enough water. You’re going to get snake bit.”  </p> 
